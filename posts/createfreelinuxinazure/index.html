@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="申请免费的微软云服务器
+
+B2ATS
+2 P6 (64GiB) managed disks 
+$100 额度。1年有效期，到期再申请
+参考
+1. Github 认证学生信息，使用 Github 账户登录 Microsoft Azure
+2. 开始
+进入 Microsoft Azure 主页面，点击 &ldquo;Create a resource&rdquo; ，点击 &ldquo;Virtual machine&rdquo; 下面的 &ldquo;create&rdquo; 即可进入创建页面，也就是 Create a virtual machine 这个页面，开始进行配置
+Region: (Asia Pacific) Southeast Asia
+Availability options: No infrastructure redundancy required
+Security type: Standard
+Image: Ubuntu Server 24.04 LTS - x64 Gen2
+Size: Standard_B2ats_v2 - 2 vcpus, 1 GiB memory ($8.61/month) 
+Authentication type: SSH public key
+Public inbound ports: Allow selected ports
+Select inbound ports: SSH (22)
+
+点击 &ldquo;Next: Disks &gt;&rdquo; ，继续配置">  
+
+  <title>
+    
+      Create Free Linux In Azure
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.51652302d3a998bf7887aed5c2cf89141bbebdf45a2c8f87b0717a3cf4f51c4e53c694c328fb1de78c3a625a1c01f80745bf1f2f42c040647a245cbbb6c2d1d7.css" integrity="sha512-UWUjAtOpmL94h67Vws&#43;JFBu&#43;vfRaLI&#43;HsHF6PPT1HE5TxpTDKPsd54w6YlocAfgHRb8fL0LAQGR6JFy7tsLR1w==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+                <div class="post-meta">
+                    <a href="/">..</a>
+
+                    <p>
+                        <time datetime="2025-04-15 11:14:59 &#43;0800 CST">
+                            2025-04-15
+                        </time>
+                    </p>
+                </div>
+
+<article>
+    <h1>Create Free Linux In Azure</h1>
+
+    
+
+    <h1 id="申请免费的微软云服务器">申请免费的微软云服务器</h1>
+<blockquote>
+<p>B2ATS<br>
+2 P6 (64GiB) managed disks <br>
+$100 额度。1年有效期，到期再申请<br>
+<a href="https://zhuanlan.zhihu.com/p/629609870">参考</a></p></blockquote>
+<h2 id="1-github-认证学生信息使用-github-账户登录-microsoft-azure">1. Github 认证学生信息，使用 Github 账户登录 Microsoft Azure</h2>
+<h2 id="2-开始">2. 开始</h2>
+<p>进入 <a href="https://portal.azure.com/#home">Microsoft Azure</a> 主页面，点击 &ldquo;Create a resource&rdquo; ，点击 &ldquo;Virtual machine&rdquo; 下面的 &ldquo;create&rdquo; 即可进入创建页面，也就是 <a href="https://portal.azure.com/#create/Microsoft.VirtualMachine">Create a virtual machine</a> 这个页面，开始进行配置</p>
+<pre><code>Region: (Asia Pacific) Southeast Asia
+Availability options: No infrastructure redundancy required
+Security type: Standard
+Image: Ubuntu Server 24.04 LTS - x64 Gen2
+Size: Standard_B2ats_v2 - 2 vcpus, 1 GiB memory ($8.61/month) 
+Authentication type: SSH public key
+Public inbound ports: Allow selected ports
+Select inbound ports: SSH (22)
+</code></pre>
+<p>点击 &ldquo;Next: Disks &gt;&rdquo; ，继续配置</p>
+<pre><code>OS disk size: 64 GiB (P6)
+</code></pre>
+<p>点击 &ldquo;Next: Networking &gt;&rdquo; ，继续配置</p>
+<pre><code>这里本应该使用动态 IP 地址，以减少开销。但是 20250331 之后无法使用了，只能使用静态 IPv4 地址，可能会导致额外的开销。
+[[参考]](https://azure.microsoft.com/en-us/updates?id=upgrade-to-standard-sku-public-ip-addresses-in-azure-by-30-september-2025-basic-sku-will-be-retired)
+[[价格$0.005/hour]](https://azure.microsoft.com/en-us/pricing/details/ip-addresses/)
+</code></pre>
+<p>点击 &ldquo;Monitoring&rdquo; ，继续配置</p>
+<pre><code>Boot diagnostics: Disable
+</code></pre>
+<p>点击 &ldquo;Review and create&rdquo; 即可创建成功。之后会自动下载 SSH 密钥文件。虚拟机创建成功。使用 SSH 密钥文件远程连接服务器。</p>
+<h2 id="3-问题">3. 问题</h2>
+<p>截止到目前20250415，我创建的服务器，不知道哪里出问题了，$100 额度被用完！也就半个月的时间！我把这个服务器已经从面板中删除了，无法看到详细的成本。我的公共 IP 地址应该是 SKU Basic ，我使用 SSH 远程连接服务器。</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/azurestudents-subscription-disabled?WT.mc_id=AzureStudentsOffer">[官方账单文档]</a>
+<a href="https://www.microsoftazuresponsorships.com/Usage">[额度查看]</a>
+<a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-faq?WT.mc_id=Portal-Microsoft_Azure_Support&amp;product=all">[计费FAQ]</a></p>
+<pre><code>Service Name    Service Resource    Spend
+Azure Bastion	Standard Gateway	$98.02
+Virtual Network	Standard IPv4 Static Public IP	$1.7
+Azure Firewall	Standard Deployment	$0.83
+Azure Bastion	Basic Data Transfer Out	$0.08
+Log Analytics	Pay-as-you-go Data Ingestion	$0.06
+Network Watcher	Standard Diagnostic Tool API	$0.01
+</code></pre>
+<p>我问了 GPT ，它回答</p>
+<pre><code>Azure Bastion是一种安全连接到虚拟机的服务，无需公共IP地址。它的计费主要基于两个因素：
+    部署时间（按小时计费）
+    使用的网关类型（Standard比Basic贵）
+你使用的是Standard Gateway，这是较高级的选项，价格自然也更高。
+可能的问题：
+    你可能在不使用时没有关闭Azure Bastion服务
+    你选择了较贵的Standard版本而非Basic版本
+    你可能不了解Bastion的计费方式，误以为它只在连接时才收费
+建议解决方案：
+    立即删除或停止当前的Azure Bastion服务
+    今后只在需要连接到VM时才部署Bastion
+    考虑使用Basic级别而非Standard级别
+    设置开支警报，避免意外消费
+    使用Azure Cost Management工具监控你的消费情况
+对于学生账户，我建议使用更经济的连接方式，比如通过SSH客户端连接，或者使用Azure的免费服务等级。
+</code></pre>
+
+</article>
+
+            </div>
+        </main>
+    </body></html>

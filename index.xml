@@ -6,8 +6,15 @@
     <description>Recent content on Guozf Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Apr 2025 21:52:38 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Apr 2025 11:14:59 +0800</lastBuildDate>
     <atom:link href="https://guo986.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Free Linux In Azure</title>
+      <link>https://guo986.github.io/posts/createfreelinuxinazure/</link>
+      <pubDate>Tue, 15 Apr 2025 11:14:59 +0800</pubDate>
+      <guid>https://guo986.github.io/posts/createfreelinuxinazure/</guid>
+      <description>&lt;h1 id=&#34;申请免费的微软云服务器&#34;&gt;申请免费的微软云服务器&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;B2ATS&lt;br&gt;&#xA;2 P6 (64GiB) managed disks &lt;br&gt;&#xA;$100 额度。1年有效期，到期再申请&lt;br&gt;&#xA;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/629609870&#34;&gt;参考&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;1-github-认证学生信息使用-github-账户登录-microsoft-azure&#34;&gt;1. Github 认证学生信息，使用 Github 账户登录 Microsoft Azure&lt;/h2&gt;&#xA;&lt;h2 id=&#34;2-开始&#34;&gt;2. 开始&lt;/h2&gt;&#xA;&lt;p&gt;进入 &lt;a href=&#34;https://portal.azure.com/#home&#34;&gt;Microsoft Azure&lt;/a&gt; 主页面，点击 &amp;ldquo;Create a resource&amp;rdquo; ，点击 &amp;ldquo;Virtual machine&amp;rdquo; 下面的 &amp;ldquo;create&amp;rdquo; 即可进入创建页面，也就是 &lt;a href=&#34;https://portal.azure.com/#create/Microsoft.VirtualMachine&#34;&gt;Create a virtual machine&lt;/a&gt; 这个页面，开始进行配置&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Region: (Asia Pacific) Southeast Asia&#xA;Availability options: No infrastructure redundancy required&#xA;Security type: Standard&#xA;Image: Ubuntu Server 24.04 LTS - x64 Gen2&#xA;Size: Standard_B2ats_v2 - 2 vcpus, 1 GiB memory ($8.61/month) &#xA;Authentication type: SSH public key&#xA;Public inbound ports: Allow selected ports&#xA;Select inbound ports: SSH (22)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;点击 &amp;ldquo;Next: Disks &amp;gt;&amp;rdquo; ，继续配置&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Miniconda</title>
       <link>https://guo986.github.io/dl/miniconda/</link>
